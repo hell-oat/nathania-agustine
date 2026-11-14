@@ -1,0 +1,299 @@
+/* --- BANNER EVENT MUSIMAN --- */
+.banner-event {
+    background: linear-gradient(135deg, #1b4332 0%, #081c15 100%);
+    color: #f3d9dc;
+    padding: 12px 16px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    border-bottom: 3px solid #c29b38;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.banner-event strong {color: #c29b38;}
+
+/* 1. Pengaturan umum */
+html { scroll-behavior: smooth;}
+* { box-sizing: border-box;}
+
+body {
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    color: #333333;
+    line-height: 1.6;
+    background-color: #fdfbf7; /* Latar belakang putih gading yang bersih dan lembut */
+}
+
+header h1, h2 {font-family: "Playfair Display", serif;}
+
+/* 2. Header dan menu */
+header {
+    background-color: #6a1b29; /* Warna utama: Maroon elegan khas bakery premium */
+    color: white;
+    text-align: center;
+    padding: 32px 16px;
+}
+
+header h1 { margin: 0; font-size: 40px; letter-spacing: 1px; }
+
+nav { margin-top: 16px; }
+
+nav a {
+    color: #f3d9dc; /* Warna teks menu sedikit pinkish/krem lembut */
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 12px;
+    transition: color 0.3s;
+}
+
+nav a:hover { color: #ffffff; text-decoration: underline; }
+
+/* --- JAM OPERASIONAL TOKO --- */
+.jam-box {
+    background: #fdfbf7;
+    border: 1px solid #ebd4d8;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-top: 16px;
+    box-shadow: 0 4px 10px rgba(106, 27, 41, 0.04);
+}
+
+.jam-row { 
+        display: flex;
+        justify-content: space-between; 
+        padding: 10px 0; 
+        border-bottom: 1px dashed #ebd4d8; 
+        font-size: 15px; 
+        color: #444; }
+
+.jam-row:last-of-type { border-bottom: none; }
+
+.jam-buka { font-weight: 600; color: #6a1b29; }
+
+/* Status Indikator Toko Buka */
+.status-toko {
+    margin-top: 15px;
+    padding-top: 12px;
+    border-top: 1px solid #ebd4d8;
+    font-size: 14px;
+    color: #1b4332;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Titik Hijau Berkedip (Indikator Live) */
+.dot-hijau {
+    width: 10px;
+    height: 10px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 0 rgba(37, 211, 102, 0.4);
+    animation: pulseDot 1.5s infinite;
+}
+
+@keyframes pulseDot { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+                     70% { box-shadow: 0 0 0 8px rgba(37, 211, 102, 0); }
+                     100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
+
+/* 3. Isi halaman */
+main { max-width: 960px; margin: 0 auto; padding: 16px; }
+section {
+    background-color: white;
+    border: 1px solid #ebd4d8; /* Garis tepi senada dengan nuansa maroon muda */
+    border-radius: 12px;
+    padding: 24px;
+    margin: 24px 0;
+    box-shadow: 0 4px 12px rgba(106, 27, 41, 0.06); /* Bayangan lembut bernuansa maroon */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+section:hover{transform: translate(-5px); box-shadow: 0 8px 20px rgba(106, 27, 41, 0.12);}
+
+h2 {color: #6a1b29;
+    border-bottom: 3px solid #c29b38; 
+    padding-bottom: 8px;
+}
+
+img { max-width: 100%; height: auto; border-radius: 8px; }
+
+/* 4. Tabel */
+table { width: 100%; border-collapse: collapse; overflow: hidden; border-radius: 8px; }
+th, td { border: 1px solid #ebd4d8; padding: 10px; text-align: left; }
+
+th { 
+    background-color: #6a1b29; 
+    color: white;
+    font-weight: 600; }
+
+    tbody tr:nth-child(even) {background-color: fcf6f7;}
+    tbody tr:hover {background-color: f4e3e6; transition: background-color 0.2s;}
+
+/* --- BAGIAN PAKET BUNDLING --- */
+.bundling-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.bundling-card {
+    flex: 1;
+    min-width: 260px;
+    background: #fff;
+    border: 2px dashed #ebd4d8;
+    border-radius: 12px;
+    padding: 20px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.bundling-card:hover {
+    transform: translateY(-5px);
+    border-color: #c29b38;
+    box-shadow: 0 8px 20px rgba(194, 155, 56, 0.2);
+}
+
+/* Card favorit diberi highlight border maroon */
+.favorit-card {
+    border: 2px solid #6a1b29;
+    background-color: #fcf6f7;
+}
+
+.badge-hemat {
+    position: absolute;
+    top: -12px;
+    right: 16px;
+    background-color: #c29b38;
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.bundling-card h3 {
+    color: #6a1b29;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.bundling-isi {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 16px;
+}
+
+.harga-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.harga-lama {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 13px;
+}
+
+.harga-baru {
+    color: #6a1b29;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* --- KARTU KHUSUS HAMPERS --- */
+.hampers-card {
+    border: 2px solid #1b4332; /* Garis tepi hijau zamrud khas kado/hampers */
+    background: linear-gradient(135deg, #f4faf7 0%, #ffffff 100%);
+}
+
+.hampers-card:hover {
+    border-color: #1b4332;
+    box-shadow: 0 10px 25px rgba(27, 67, 50, 0.2);
+}
+
+.hampers-card h3 {
+    color: #1b4332; /* Judul bernuansa hijau elegan */
+}
+
+/* 5. Form */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-family: inherit;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #6a1b29; 
+}
+
+button {
+    background-color: #6a1b29;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+button:hover { background-color: #4e121d; /* Maroon lebih gelap saat kursor di atasnya */}
+
+/* 6. Tombol WhatsApp */
+.tombol-wa {
+    display: inline-block;
+    background-color: #25d366;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+}
+
+.tombol-wa:hover { background-color: #1eb956; }
+
+/* Styling Select / Dropdown Rating biar seragam */
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ebd4d8;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #444;
+    box-sizing: border-box;
+}
+
+.form-group select:focus {
+    outline: none;
+    border-color: #6a1b29;
+}
+
+/* Form Notifikasi */
+.feedback-notif {
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #fcf6f7;
+    border: 1px dashed #6a1b29;
+    color: #6a1b29;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* 7. Footer */
+footer {
+    background-color: #3b0e17; /* Maroon sangat gelap untuk bagian penutup */
+    color: #f3d9dc;
+    text-align: center;
+    padding: 16px;
+}
